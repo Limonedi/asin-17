@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center my-5">Producto NRO: {{id}}</h1>
+  <form>
+      <div class="form-group">
+          <div *ngFor="let item of productDetail">
+              <label for="descripcion" class="">Descripción:</label>
+              <input type="text" [(ngModel)]="item.producto" name="descripcion" id="descripcion" class="form-control">
+              <label for="compra" class="">Precio Compra:</label>
+              <input type="text" [(ngModel)]="item.Compra" name="precioCompra" id="compra" class="form-control">
+              <label for="venta" class="">Precio Venta:</label>
+              <input type="text" [(ngModel)]="item.Venta" name="precioVenta" id="venta" class="form-control">
+              <label for="ganancia" class="">Ganancia:</label>
+              <input type="text" [(ngModel)]="item.ganancia" name="ganancia" id="ganancia" class="form-control">
+              <label for="existencia" class="">Existencia:</label>
+              <input type="text" [(ngModel)]="item.stock" name="existencia" name="existencia" class="form-control">
+          </div>
+      </div>
+      <br>
+      <div class="text-center">
+          <a [routerLink]="['/']" routerLinkActive="active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{exact: true}" class="btn btn-primary">Guardar y volver a la lista</a>
+      </div>
+  </form>
+</div>
